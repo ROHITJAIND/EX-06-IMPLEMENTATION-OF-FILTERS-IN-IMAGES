@@ -18,56 +18,142 @@ Register Number:
 
 ##### i) Using Averaging Filter
 ```Python
-
-
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread("blue.jpg")
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+kernel=np.ones((11,11),np.float32)/169
+Avg_Fil=cv2.filter2D(img,-1,kernel)
+plt.figure(figsize=(9,9))
+plt.subplot(1,2,1)
+plt.imshow(img)
+plt.title("Original Image")
+plt.axis("off")
+plt.subplot(1,2,2)
+plt.imshow(Avg_Fil)
+plt.title("Average Filter Image")
+plt.axis("off")
+plt.show()
 ```
 - OUTPUT:<br>
-![Screenshot 2023-09-14 071931](https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/651b0051-1e3b-416d-b184-d9155bf0413d)
+<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/651b0051-1e3b-416d-b184-d9155bf0413d">
 
 
 ##### ii) Using Weighted Averaging Filter
 ```Python
-
-
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread("blue.jpg")
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+kernel1=np.array([[1,2,1],[2,4,2],[1,2,1]])/16
+Wgt_Avg_Fil=cv2.filter2D(img,-1,kernel1)
+plt.figure(figsize=(9,9))
+plt.subplot(1,2,1)
+plt.imshow(img)
+plt.title("Original Image")
+plt.axis("off")
+plt.subplot(1,2,2)
+plt.imshow(Wgt_Avg_Fil)
+plt.title("Weighted Average Filter Image")
+plt.axis("off")
+plt.show()
 ```
 - OUTPUT:<br>
-![Screenshot 2023-09-14 072219](https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/ec12d024-2b3d-4f61-b019-7efcc4ff0178)
+<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/ec12d024-2b3d-4f61-b019-7efcc4ff0178">
 
 ##### iii) Using Gaussian Filter
 ```Python
-
-
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread("blue.jpg")
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+gaussian_blur=cv2.GaussianBlur(img,(33,33),0,0)
+plt.figure(figsize=(9,9))
+plt.subplot(1,2,1)
+plt.imshow(img)
+plt.title("Original Image")
+plt.axis("off")
+plt.subplot(1,2,2)
+plt.imshow(gaussian_blur)
+plt.title("Gaussian Blur")
+plt.axis("off")
+plt.show()
 ```
 - OUTPUT:<br>
-![Screenshot 2023-09-14 072230](https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/6ed5810f-4768-488c-be58-634b2d57b2fe)
-
+<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/6ed5810f-4768-488c-be58-634b2d57b2fe">
 
 ##### iv) Using Median Filter
 ```Python
-
-
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread("blue.jpg")
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+median=cv2.medianBlur(img,13)
+plt.figure(figsize=(9,9))
+plt.subplot(1,2,1)
+plt.imshow(img)
+plt.title("Original Image")
+plt.axis("off")
+plt.subplot(1,2,2)
+plt.imshow(median)
+plt.title("Median Blur")
+plt.axis("off")
+plt.show()
 ```
 - OUTPUT:<br>
-![Screenshot 2023-09-14 072245](https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/39703063-9937-4ede-87cb-49003b65964f)
+<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/39703063-9937-4ede-87cb-49003b65964f">
 
 
 #### 2.) Sharpening Filters
 ##### i) Using Laplacian Kernal
 ```Python
-
-
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread("blue.jpg")
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+kernel=np.array([[-1,-1,-1],[2,-2,1],[2,1,-1]])
+Lapla_Kernel=cv2.filter2D(img,-1,kernel)
+plt.figure(figsize=(9,9))
+plt.subplot(1,2,1)
+plt.imshow(img)
+plt.title("Original Image")
+plt.axis("off")
+plt.subplot(1,2,2)
+plt.imshow(Lapla_Kernel)
+plt.title("Laplacian Kernel")
+plt.axis("off")
+plt.show()
 ```
 - OUTPUT:<br>
-![Screenshot 2023-09-14 072308](https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/2d27a1bb-cad7-45d9-a228-20a4d56f3c97)
+<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/2d27a1bb-cad7-45d9-a228-20a4d56f3c97">
 
 
 ##### ii) Using Laplacian Operator
 ```Python
-
-
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread("blue.jpg")
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+Lapla_Opertr=cv2.Laplacian(img,cv2.CV_64F)
+plt.figure(figsize=(9,9))
+plt.subplot(1,2,1)
+plt.imshow(img)
+plt.title("Original Image")
+plt.axis("off")
+plt.subplot(1,2,2)
+plt.imshow(Lapla_Opertr)
+plt.title("Laplacian Kernel")
+plt.axis("off")
+plt.show()
 ```
 - OUTPUT:<br>
-![Screenshot 2023-09-14 072326](https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/e9a40619-bfdc-4169-932b-aa3bf923d2cb)
+<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/e9a40619-bfdc-4169-932b-aa3bf923d2cb">
 
 
 ### Result:
