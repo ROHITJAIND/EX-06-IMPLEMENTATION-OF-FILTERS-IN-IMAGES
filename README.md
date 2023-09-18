@@ -1,4 +1,4 @@
-# EX-06 IMPLEMENTATION-OF-FILTERS
+# EX-06 IMPLEMENTATION OF FILTERS
 ### Aim:
 To implement filters for smoothing and sharpening the images in the spatial domain.
 ### Software Required:
@@ -11,11 +11,10 @@ Anaconda - Python 3.7
 - Step5: End the Program.
 ### Program:
 ```
-Developed By:
-Register Number:
+Developed By: ROHIT JAIN D
+Register Number: 212222230120
 ```
 #### 1.) Smoothing Filters
-
 ##### i) Using Averaging Filter
 ```Python
 import cv2
@@ -37,7 +36,7 @@ plt.axis("off")
 plt.show()
 ```
 - OUTPUT:<br>
-<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/651b0051-1e3b-416d-b184-d9155bf0413d">
+<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/651b0051-1e3b-416d-b184-d9155bf0413d">
 
 
 ##### ii) Using Weighted Averaging Filter
@@ -61,7 +60,7 @@ plt.axis("off")
 plt.show()
 ```
 - OUTPUT:<br>
-<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/ec12d024-2b3d-4f61-b019-7efcc4ff0178">
+<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/ec12d024-2b3d-4f61-b019-7efcc4ff0178">
 
 ##### iii) Using Gaussian Filter
 ```Python
@@ -83,7 +82,7 @@ plt.axis("off")
 plt.show()
 ```
 - OUTPUT:<br>
-<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/6ed5810f-4768-488c-be58-634b2d57b2fe">
+<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/6ed5810f-4768-488c-be58-634b2d57b2fe">
 
 ##### iv) Using Median Filter
 ```Python
@@ -105,7 +104,7 @@ plt.axis("off")
 plt.show()
 ```
 - OUTPUT:<br>
-<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/39703063-9937-4ede-87cb-49003b65964f">
+<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/39703063-9937-4ede-87cb-49003b65964f">
 
 
 #### 2.) Sharpening Filters
@@ -130,7 +129,7 @@ plt.axis("off")
 plt.show()
 ```
 - OUTPUT:<br>
-<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/2d27a1bb-cad7-45d9-a228-20a4d56f3c97">
+<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/2d27a1bb-cad7-45d9-a228-20a4d56f3c97">
 
 
 ##### ii) Using Laplacian Operator
@@ -153,7 +152,7 @@ plt.axis("off")
 plt.show()
 ```
 - OUTPUT:<br>
-<img height=10% width=40% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/e9a40619-bfdc-4169-932b-aa3bf923d2cb">
+<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/e9a40619-bfdc-4169-932b-aa3bf923d2cb">
 
 
 ### Result:
