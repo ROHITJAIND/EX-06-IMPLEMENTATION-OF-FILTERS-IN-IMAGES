@@ -10,10 +10,43 @@ Anaconda - Python 3.7
 - Step4: Display the Output Images.
 - Step5: End the Program.
 ### Program:
+<table>
+<tr>
+<td width="60%">
+  
+
+#### Importing packages and reading image:
+```Python
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread("blue.jpg")
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+
+def plot(img1,nam1,img2,nam2):
+  plt.figure(figsize=(9,9))
+  plt.subplot(1,2,1)
+  plt.imshow(img1)
+  plt.title(nam1)
+  plt.axis("off")
+  plt.subplot(1,2,2)
+  plt.imshow(img2)
+  plt.title(nam2)
+  plt.axis("off")
+  plt.show()
+```
+
+</td>
+<td>
+  
 ```
 Developed By: ROHIT JAIN D
 Register Number: 212222230120
 ```
+</td>
+</tr>
+</table>
+
 <table>
 <tr>
 <td>
@@ -21,23 +54,10 @@ Register Number: 212222230120
 #### 1.) Smoothing Filters
 ##### i) Using Averaging Filter
 ```Python
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-img=cv2.imread("blue.jpg")
-img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 kernel=np.ones((11,11),np.float32)/169
-Avg_Fil=cv2.filter2D(img,-1,kernel)
-plt.figure(figsize=(9,9))
-plt.subplot(1,2,1)
-plt.imshow(img)
-plt.title("Original Image")
-plt.axis("off")
-plt.subplot(1,2,2)
-plt.imshow(Avg_Fil)
-plt.title("Average Filter Image")
-plt.axis("off")
-plt.show()
+AvgFil=cv2.filter2D(img,-1,kernel)
+plot(img1,"Original Image",
+      AvgFil,"Average Filter")
 ```
 </td>
 <td>
@@ -51,23 +71,10 @@ plt.show()
 
 ##### ii) Using Weighted Averaging Filter
 ```Python
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-img=cv2.imread("blue.jpg")
-img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 kernel1=np.array([[1,2,1],[2,4,2],[1,2,1]])/16
-Wgt_Avg_Fil=cv2.filter2D(img,-1,kernel1)
-plt.figure(figsize=(9,9))
-plt.subplot(1,2,1)
-plt.imshow(img)
-plt.title("Original Image")
-plt.axis("off")
-plt.subplot(1,2,2)
-plt.imshow(Wgt_Avg_Fil)
-plt.title("Weighted Average Filter Image")
-plt.axis("off")
-plt.show()
+WgtAvg=cv2.filter2D(img,-1,kernel1)
+plot(img1,"Original Image",
+      WgtAvg,"Weighted Average Filter")
 ```
 
 </td>
@@ -82,22 +89,9 @@ plt.show()
   
 ##### iii) Using Gaussian Filter
 ```Python
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-img=cv2.imread("blue.jpg")
-img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-gaussian_blur=cv2.GaussianBlur(img,(33,33),0,0)
-plt.figure(figsize=(9,9))
-plt.subplot(1,2,1)
-plt.imshow(img)
-plt.title("Original Image")
-plt.axis("off")
-plt.subplot(1,2,2)
-plt.imshow(gaussian_blur)
-plt.title("Gaussian Blur")
-plt.axis("off")
-plt.show()
+GauBlur=cv2.GaussianBlur(img,(33,33),0,0)
+plot(img1,"Original Image",
+      GauBlur,"Gaussian Blur")
 ```
 
 </td>
@@ -112,22 +106,9 @@ plt.show()
   
 ##### iv) Using Median Filter
 ```Python
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-img=cv2.imread("blue.jpg")
-img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 median=cv2.medianBlur(img,13)
-plt.figure(figsize=(9,9))
-plt.subplot(1,2,1)
-plt.imshow(img)
-plt.title("Original Image")
-plt.axis("off")
-plt.subplot(1,2,2)
-plt.imshow(median)
-plt.title("Median Blur")
-plt.axis("off")
-plt.show()
+plot(img1,"Original Image",
+      median,"Median Blur")
 ```
 
 </td>
@@ -143,23 +124,10 @@ plt.show()
 #### 2.) Sharpening Filters
 ##### i) Using Laplacian Kernal
 ```Python
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-img=cv2.imread("blue.jpg")
-img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 kernel=np.array([[-1,-1,-1],[2,-2,1],[2,1,-1]])
-Lapla_Kernel=cv2.filter2D(img,-1,kernel)
-plt.figure(figsize=(9,9))
-plt.subplot(1,2,1)
-plt.imshow(img)
-plt.title("Original Image")
-plt.axis("off")
-plt.subplot(1,2,2)
-plt.imshow(Lapla_Kernel)
-plt.title("Laplacian Kernel")
-plt.axis("off")
-plt.show()
+LapKel=cv2.filter2D(img,-1,kernel)
+plot(img1,"Original Image",
+      LapKel,"Laplacian Kernel")
 ```
 
 </td>
@@ -174,22 +142,9 @@ plt.show()
 
 ##### ii) Using Laplacian Operator
 ```Python
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-img=cv2.imread("blue.jpg")
-img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-Lapla_Opertr=cv2.Laplacian(img,cv2.CV_64F)
-plt.figure(figsize=(9,9))
-plt.subplot(1,2,1)
-plt.imshow(img)
-plt.title("Original Image")
-plt.axis("off")
-plt.subplot(1,2,2)
-plt.imshow(Lapla_Opertr)
-plt.title("Laplacian Kernel")
-plt.axis("off")
-plt.show()
+LapOpr=cv2.Laplacian(img,cv2.CV_64F)
+plot(img1,"Original Image",
+      LapOpr,"Laplacian Kernel")
 ```
 
 </td>
