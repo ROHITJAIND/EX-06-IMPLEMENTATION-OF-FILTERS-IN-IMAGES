@@ -14,6 +14,10 @@ Anaconda - Python 3.7
 Developed By: ROHIT JAIN D
 Register Number: 212222230120
 ```
+<table>
+<tr>
+<td>
+
 #### 1.) Smoothing Filters
 ##### i) Using Averaging Filter
 ```Python
@@ -35,9 +39,15 @@ plt.title("Average Filter Image")
 plt.axis("off")
 plt.show()
 ```
-- OUTPUT:<br>
-<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/651b0051-1e3b-416d-b184-d9155bf0413d">
-
+</td>
+<td>
+  
+#### OUTPUT:<br>
+<img src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/651b0051-1e3b-416d-b184-d9155bf0413d">
+</td>
+</tr>
+</tr>
+<td>
 
 ##### ii) Using Weighted Averaging Filter
 ```Python
@@ -59,9 +69,17 @@ plt.title("Weighted Average Filter Image")
 plt.axis("off")
 plt.show()
 ```
-- OUTPUT:<br>
-<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/ec12d024-2b3d-4f61-b019-7efcc4ff0178">
 
+</td>
+<td>
+  
+#### OUTPUT:<br>
+<img src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/ec12d024-2b3d-4f61-b019-7efcc4ff0178">
+</td>
+</tr>
+</tr>
+<td>
+  
 ##### iii) Using Gaussian Filter
 ```Python
 import cv2
@@ -81,9 +99,17 @@ plt.title("Gaussian Blur")
 plt.axis("off")
 plt.show()
 ```
-- OUTPUT:<br>
-<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/6ed5810f-4768-488c-be58-634b2d57b2fe">
 
+</td>
+<td>
+  
+#### OUTPUT:<br>
+<img src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/6ed5810f-4768-488c-be58-634b2d57b2fe">
+</td>
+</tr>
+</tr>
+<td>
+  
 ##### iv) Using Median Filter
 ```Python
 import cv2
@@ -103,9 +129,16 @@ plt.title("Median Blur")
 plt.axis("off")
 plt.show()
 ```
-- OUTPUT:<br>
-<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/39703063-9937-4ede-87cb-49003b65964f">
 
+</td>
+<td>
+  
+#### OUTPUT:<br>
+<img src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/39703063-9937-4ede-87cb-49003b65964f">
+</td>
+</tr>
+</tr>
+<td>
 
 #### 2.) Sharpening Filters
 ##### i) Using Laplacian Kernal
@@ -128,9 +161,16 @@ plt.title("Laplacian Kernel")
 plt.axis("off")
 plt.show()
 ```
-- OUTPUT:<br>
-<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/2d27a1bb-cad7-45d9-a228-20a4d56f3c97">
 
+</td>
+<td>
+  
+#### OUTPUT:<br>
+<img src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/2d27a1bb-cad7-45d9-a228-20a4d56f3c97">
+</td>
+</tr>
+</tr>
+<td>
 
 ##### ii) Using Laplacian Operator
 ```Python
@@ -151,9 +191,15 @@ plt.title("Laplacian Kernel")
 plt.axis("off")
 plt.show()
 ```
-- OUTPUT:<br>
-<img height=15% width=50% src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/e9a40619-bfdc-4169-932b-aa3bf923d2cb">
 
+</td>
+<td>
+  
+#### OUTPUT:<br>
+<img src="https://github.com/ROHITJAIND/IMPLEMENTATION-OF-FILTERS-IN-IMAGES/assets/118707073/e9a40619-bfdc-4169-932b-aa3bf923d2cb">
+</td>
+</tr>
+</table>
 
 ### Result:
 Thus the filters are designed for smoothing and sharpening the images in the spatial domain.
