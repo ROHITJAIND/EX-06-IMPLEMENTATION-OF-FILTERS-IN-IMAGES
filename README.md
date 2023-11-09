@@ -1,6 +1,6 @@
 # EX-6 IMPLEMENTATION OF FILTERS
 ### Aim:
-To implement filters for smoothing and sharpening the images in the spatial domain.
+To implement filters for smoothing and sharpening the images in the spatial domain.&emsp;&emsp;&emsp;**DATE:** 19.09.2023
 ### Software Required:
 Anaconda - Python 3.7
 ### Algorithm:
